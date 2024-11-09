@@ -15,10 +15,14 @@ function App() {
         following: 100
     });
 
+    const changeAvatar = url => {
+        setUser({ ...user, avatar: url });
+    }
+
     return (
         <div className={'app'}>
-            <Navigation user={user}/>
-            <Body user={user} stats={stats}/>
+            <Navigation changeAvatar={changeAvatar} user={user}/>
+            <Body changeAvatar={changeAvatar} user={user} stats={stats}/>
         </div>
     )
 }
