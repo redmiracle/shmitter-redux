@@ -13,7 +13,6 @@ export const twitterReducer = (state = {}, action) => {
             const count = newStats[typeStats];
             const sum = action.payload.sum;
 
-
             return {...state,stats:{...state.stats,
                     [typeStats]:sum<0&&count<Math.abs(sum)?0:count+sum }};
 
