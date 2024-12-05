@@ -1,7 +1,6 @@
 export const CHANGE_AVATAR = 'CHANGE_AVATAR'
 export const CHANGE_NAME = 'CHANGE_NAME'
-export const CHANGE_FOLLOWER = 'CHANGE_FOLLOWER'
-export const CHANGE_FOLLOWING = 'CHANGE_FOLLOWING '
+export const CHANGE_STATS = 'CHANGE_STATS'
 
 export const changeAvatar = url => ({
     type: CHANGE_AVATAR,
@@ -13,14 +12,12 @@ export const changeName = name => ({
     payload: name
 })
 
-export const changeFollower = num => ({
-    type: CHANGE_FOLLOWER,
-    payload: num
-})
-
-export const changeFollowing = num => ({
-    type: CHANGE_FOLLOWING,
-    payload: num
+export const changeStats = (typeStats, sum) => ({
+    type: CHANGE_STATS,
+    payload: {
+        typeStats:typeStats,
+        sum:sum,
+    }
 })
 
 
