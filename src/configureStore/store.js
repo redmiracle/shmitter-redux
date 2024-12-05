@@ -8,7 +8,7 @@ const initialState = {
     },
     stats: {
         followers: 1,
-        following: 2
+        following: 1
     }
 }
 
